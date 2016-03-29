@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eIz-Vx-IQD">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Recipe Collection View Controller-->
+        <scene sceneID="Scp-ef-ayc">
+            <objects>
+                <collectionViewController id="ekc-2M-9H6" customClass="RecipeCollectionViewController" customModule="CollectionViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zIL-Sw-4Zo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UAp-xU-fPh">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Nm2-Ng-pyu" customClass="RecipeCollectionViewCell" customModule="CollectionViewDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-9u-4Il">
+                                            <rect key="frame" x="5" y="8" width="90" height="72"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="m8p-9u-4Il" firstAttribute="top" secondItem="Nm2-Ng-pyu" secondAttribute="top" constant="8" id="AGO-HE-IH3"/>
+                                    <constraint firstItem="m8p-9u-4Il" firstAttribute="leading" secondItem="Nm2-Ng-pyu" secondAttribute="leading" constant="5" id="Lwv-RQ-ua9"/>
+                                    <constraint firstAttribute="trailing" secondItem="m8p-9u-4Il" secondAttribute="trailing" constant="5" id="qA2-2m-RjL"/>
+                                    <constraint firstAttribute="bottom" secondItem="m8p-9u-4Il" secondAttribute="bottom" constant="20" id="uU1-6e-PcO"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="recipeImageView" destination="m8p-9u-4Il" id="4ME-y3-Gfo"/>
+                                    <segue destination="R73-TC-Lfa" kind="presentation" identifier="showRecipePhoto" id="wTD-aA-PEx"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ekc-2M-9H6" id="LdB-7W-bEy"/>
+                            <outlet property="delegate" destination="ekc-2M-9H6" id="wLJ-41-GGt"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="5bK-ui-f5z">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="Wo6-wd-W5N">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="ekc-2M-9H6" id="3vw-3r-SZd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareButton" destination="Wo6-wd-W5N" id="3fm-hy-36p"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yaZ-in-lxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="272"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="yVW-aI-KOD">
+            <objects>
+                <viewController id="R4Q-Hk-zKv" customClass="PhotoViewController" customModule="CollectionViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7eF-Cy-6c0"/>
+                        <viewControllerLayoutGuide type="bottom" id="v8k-g6-vfO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="orw-Xl-K6q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FmH-Yh-OTG">
+                                <rect key="frame" x="0.0" y="64" width="320" height="400"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FmH-Yh-OTG" firstAttribute="leading" secondItem="orw-Xl-K6q" secondAttribute="leading" id="4Ln-Xs-pvX"/>
+                            <constraint firstAttribute="trailing" secondItem="FmH-Yh-OTG" secondAttribute="trailing" id="Ifu-BC-goy"/>
+                            <constraint firstItem="v8k-g6-vfO" firstAttribute="top" secondItem="FmH-Yh-OTG" secondAttribute="bottom" constant="104" id="dSy-uy-rDP"/>
+                            <constraint firstItem="FmH-Yh-OTG" firstAttribute="top" secondItem="7eF-Cy-6c0" secondAttribute="bottom" id="p7W-Yj-K4j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo" id="rOU-Tz-Sy9">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="HlE-Mv-a24">
+                            <connections>
+                                <segue destination="6qY-Ee-dAj" kind="unwind" unwindAction="unwindToHome:" id="24D-q8-Eeg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="recipeImageView" destination="FmH-Yh-OTG" id="f49-PV-ZNV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDa-Lf-kBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6qY-Ee-dAj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="272"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="73W-R2-eQz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eIz-Vx-IQD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4fq-ol-vac">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ekc-2M-9H6" kind="relationship" relationship="rootViewController" id="V6E-Xc-a7d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bcd-1R-eLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="272"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cFK-dp-V4w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R73-TC-Lfa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O7e-SH-ehC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R4Q-Hk-zKv" kind="relationship" relationship="rootViewController" id="zcM-6W-78S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nh-tW-f3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086" y="272"/>
+        </scene>
+    </scenes>
+</document>

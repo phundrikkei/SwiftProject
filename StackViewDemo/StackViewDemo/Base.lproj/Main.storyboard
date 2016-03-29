@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q0I-Ux-8FA">
+                                <rect key="frame" x="183" y="46" width="234" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wardrobe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omT-Er-1RH">
+                                        <rect key="frame" x="21" y="0.0" width="192" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep your wardrobe organized" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajY-me-AjH">
+                                        <rect key="frame" x="0.0" y="54" width="234" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iCp-2M-PHW">
+                                <rect key="frame" x="20" y="137" width="560" height="338"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-1" translatesAutoresizingMaskIntoConstraints="NO" id="nSK-4w-PI2">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="338"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-2" translatesAutoresizingMaskIntoConstraints="NO" id="NN7-0p-Qz6">
+                                        <rect key="frame" x="190" y="0.0" width="180" height="338"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-3" translatesAutoresizingMaskIntoConstraints="NO" id="UFs-zl-pm9">
+                                        <rect key="frame" x="380" y="0.0" width="180" height="338"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iCp-2M-PHW" secondAttribute="height" multiplier="280:169" id="PHT-Xp-L8B"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MFg-gg-lfM">
+                                <rect key="frame" x="100" y="550" width="400" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w37-jX-gMA">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sing in">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylg-tS-h2n">
+                                        <rect key="frame" x="205" y="0.0" width="195" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sign up with email">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Cyc-Q5-wor"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YJD-X9-qqN">
+                                <rect key="frame" x="98" y="577" width="179" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ps-ta-g7Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cg-Hf-r9Q">
+                                        <rect key="frame" x="0.0" y="40" width="179" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sign up with email">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="c5U-7C-C6b">
+                                        <variation key="widthClass=compact" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="c5U-7C-C6b"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q0I-Ux-8FA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="2Ea-qR-iM1">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="YJD-X9-qqN" secondAttribute="trailing" constant="61" id="Vi3-jh-5vK"/>
+                            <constraint firstItem="MFg-gg-lfM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wgg-Ok-tFG"/>
+                            <constraint firstItem="YJD-X9-qqN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="82" id="Ybw-D2-5Jt"/>
+                            <constraint firstItem="iCp-2M-PHW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ajL-Qx-jAZ"/>
+                            <constraint firstItem="iCp-2M-PHW" firstAttribute="top" secondItem="q0I-Ux-8FA" secondAttribute="bottom" constant="15.5" id="eB9-pz-FZz"/>
+                            <constraint firstItem="q0I-Ux-8FA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gmZ-6y-TBT"/>
+                            <constraint firstItem="YJD-X9-qqN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iWt-ux-v26"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YJD-X9-qqN" secondAttribute="bottom" constant="20" id="ohu-vT-oRg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MFg-gg-lfM" secondAttribute="bottom" constant="20" id="tyb-aW-5dU"/>
+                            <constraint firstItem="iCp-2M-PHW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vMW-Ug-Bzc"/>
+                            <constraint firstItem="YJD-X9-qqN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwd-aT-c2i"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="YJD-X9-qqN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Vi3-jh-5vK"/>
+                                <exclude reference="iWt-ux-v26"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="YJD-X9-qqN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="YJD-X9-qqN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="MFg-gg-lfM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277.5" y="323.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="t-shirt-1" width="180" height="338"/>
+        <image name="t-shirt-2" width="180" height="338"/>
+        <image name="t-shirt-3" width="180" height="338"/>
+    </resources>
+</document>
