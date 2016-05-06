@@ -1,0 +1,6 @@
+framework module Pods_PagingMenuDemo {
+  umbrella header "Pods-PagingMenuDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

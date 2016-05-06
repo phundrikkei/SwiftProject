@@ -1,43 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eIz-Vx-IQD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eIz-Vx-IQD">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Recipe Collection View Controller-->
         <scene sceneID="Scp-ef-ayc">
             <objects>
                 <collectionViewController id="ekc-2M-9H6" customClass="RecipeCollectionViewController" customModule="CollectionViewDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zIL-Sw-4Zo">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="zIL-Sw-4Zo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UAp-xU-fPh">
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="UAp-xU-fPh">
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Nm2-Ng-pyu" customClass="RecipeCollectionViewCell" customModule="CollectionViewDemo" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Cell" id="Nm2-Ng-pyu" customClass="RecipeCollectionViewCell" customModule="CollectionViewDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-9u-4Il">
-                                            <rect key="frame" x="5" y="8" width="90" height="72"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-9u-4Il">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="m8p-9u-4Il" secondAttribute="trailing" id="5YY-Xc-15C"/>
                                     <constraint firstItem="m8p-9u-4Il" firstAttribute="top" secondItem="Nm2-Ng-pyu" secondAttribute="top" constant="8" id="AGO-HE-IH3"/>
                                     <constraint firstItem="m8p-9u-4Il" firstAttribute="leading" secondItem="Nm2-Ng-pyu" secondAttribute="leading" constant="5" id="Lwv-RQ-ua9"/>
+                                    <constraint firstItem="m8p-9u-4Il" firstAttribute="top" secondItem="Nm2-Ng-pyu" secondAttribute="top" id="MZs-JX-1Ds"/>
+                                    <constraint firstAttribute="bottom" secondItem="m8p-9u-4Il" secondAttribute="bottom" id="Pbt-N0-WO2"/>
+                                    <constraint firstItem="m8p-9u-4Il" firstAttribute="leading" secondItem="Nm2-Ng-pyu" secondAttribute="leading" id="mFG-ul-Mc1"/>
                                     <constraint firstAttribute="trailing" secondItem="m8p-9u-4Il" secondAttribute="trailing" constant="5" id="qA2-2m-RjL"/>
                                     <constraint firstAttribute="bottom" secondItem="m8p-9u-4Il" secondAttribute="bottom" constant="20" id="uU1-6e-PcO"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AGO-HE-IH3"/>
+                                        <exclude reference="Lwv-RQ-ua9"/>
+                                        <exclude reference="qA2-2m-RjL"/>
+                                        <exclude reference="uU1-6e-PcO"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="recipeImageView" destination="m8p-9u-4Il" id="4ME-y3-Gfo"/>
                                     <segue destination="R73-TC-Lfa" kind="presentation" identifier="showRecipePhoto" id="wTD-aA-PEx"/>
@@ -50,6 +63,15 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="5bK-ui-f5z">
+                        <nil key="title"/>
+                        <pageControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="3A3-gD-UIy">
+                            <rect key="frame" x="8" y="4" width="253" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.53725490200000003" green="0.74117647060000003" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="changePageControl:" destination="ekc-2M-9H6" eventType="valueChanged" id="rv5-1H-fYg"/>
+                            </connections>
+                        </pageControl>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="Wo6-wd-W5N">
                             <connections>
                                 <action selector="shareButtonTapped:" destination="ekc-2M-9H6" id="3vw-3r-SZd"/>
@@ -57,6 +79,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="pageControl" destination="3A3-gD-UIy" id="U94-wW-78U"/>
                         <outlet property="shareButton" destination="Wo6-wd-W5N" id="3fm-hy-36p"/>
                     </connections>
                 </collectionViewController>
