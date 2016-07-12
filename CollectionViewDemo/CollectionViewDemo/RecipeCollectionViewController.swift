@@ -10,7 +10,7 @@ import UIKit
 
 class RecipeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var pageControl: UIPageControl!
+//    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     var recipeImages = ["angry_birds_cake", "creme_brelee", "egg_benedict",
@@ -23,13 +23,13 @@ class RecipeCollectionViewController: UICollectionViewController, UICollectionVi
     var selectedRecipes:[String] = []
     
     override func viewDidLoad() {
-        pageControl.numberOfPages = recipeImages.count
+//        pageControl.numberOfPages = recipeImages.count
         
     }
     
-//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-//        collectionView?.reloadData()
-//    }
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView?.reloadData()
+    }
     
     // MARK: UICollectionViewDataSource
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -43,23 +43,23 @@ class RecipeCollectionViewController: UICollectionViewController, UICollectionVi
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! RecipeCollectionViewCell
         cell.recipeImageView.image = (indexPath.row == recipeImages.count) ? UIImage(named: recipeImages[0]) : UIImage(named: recipeImages[indexPath.row])
-//        cell.backgroundView = UIImageView(image: UIImage(named: "photo-frame"))
-//        cell.selectedBackgroundView = UIImageView(image: UIImage(named: "photo-frame-selected"))
+        cell.backgroundView = UIImageView(image: UIImage(named: "photo-frame"))
+        cell.selectedBackgroundView = UIImageView(image: UIImage(named: "photo-frame-selected"))
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 //            let sideSize = (traitCollection.horizontalSizeClass == .Compact &&
 //            traitCollection.verticalSizeClass == .Regular) ? 80.0 : 128.0
-//            let width = collectionView.frame.size.width
-//            let height = collectionView.frame.size.height
-//            let space = CGFloat(10)
-//            let count = CGFloat(recipeImages.count)
-//            let sideSize = sqrt(width * height / count) - space * 3
-//            print(sideSize)
+////            let width = collectionView.frame.size.width
+////            let height = collectionView.frame.size.height
+////            let space = CGFloat(10)
+////            let count = CGFloat(recipeImages.count)
+////            let sideSize = sqrt(width * height / count) - space * 3
+////            print(sideSize)
 //            return CGSize(width: sideSize, height: sideSize)
-        return collectionView.bounds.size
-    }
+////        return collectionView.bounds.size
+//    }
     
     // MARK: UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -83,12 +83,13 @@ class RecipeCollectionViewController: UICollectionViewController, UICollectionVi
     }
     
     override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        let page = scrollView.contentOffset.x / scrollView.bounds.width
-        pageControl.currentPage = Int(page)
-        if Int(page) == recipeImages.count {
-            pageControl.currentPage = 0
-            collectionView?.scrollToItemAtIndexPath( NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: .None, animated: false)
-        }
+//        let page = scrollView.contentOffset.x / scrollView.bounds.width
+//        pageControl.currentPage = Int(page)
+//        // go to first when slide to last
+//        if Int(page) == recipeImages.count {
+//            pageControl.currentPage = 0
+//            collectionView?.scrollToItemAtIndexPath( NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: .None, animated: false)
+//        }
     }
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "showRecipePhoto" {
@@ -131,8 +132,8 @@ class RecipeCollectionViewController: UICollectionViewController, UICollectionVi
         }
     }
     
-    @IBAction func changePageControl(sender: AnyObject) {
-        let page = pageControl.currentPage
-         collectionView?.scrollToItemAtIndexPath(NSIndexPath(forRow: page, inSection: 0), atScrollPosition: .None, animated: true)
-    }
+//    @IBAction func changePageControl(sender: AnyObject) {
+//        let page = pageControl.currentPage
+//         collectionView?.scrollToItemAtIndexPath(NSIndexPath(forRow: page, inSection: 0), atScrollPosition: .None, animated: true)
+//    }
 }
