@@ -87,7 +87,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="News Frontpage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9u-kK-HIU">
                                 <rect key="frame" x="59" y="100" width="202" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -161,6 +161,9 @@
                                         <constraint firstItem="9nh-mx-Cug" firstAttribute="centerY" secondItem="naf-Wz-ZgC" secondAttribute="centerY" id="zCF-mx-eqI"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5D7-fp-3iF" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="yEw-BZ-PRj"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="comments" id="4hF-01-K83">
                                 <rect key="frame" x="0.0" y="110" width="320" height="44"/>
@@ -348,7 +351,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pan-AZ-D0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="-371"/>
+            <point key="canvasLocation" x="586" y="-286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Z6-ag-ZQ1">
@@ -366,7 +369,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOb-gn-Bt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="349"/>
+            <point key="canvasLocation" x="586" y="377"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="Km2-4s-uzW">
@@ -410,4 +413,7 @@
         <image name="tag.png" width="1024" height="1024"/>
         <image name="wishlist.png" width="1024" height="1024"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tZP-dp-4J5"/>
+    </inferredMetricsTieBreakers>
 </document>

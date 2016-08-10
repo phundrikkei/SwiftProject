@@ -380,11 +380,14 @@
 		F4EECF32177C99F400778578 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hoa Dang (9P7FG4VZ45)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hoa Dang (9P7FG4VZ45)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SidebarDemo/SidebarDemo-Prefix.pch";
 				INFOPLIST_FILE = "SidebarDemo/SidebarDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "98285c2c-7461-4122-82ef-12a1af08a7ea";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,11 +395,13 @@
 		F4EECF33177C99F400778578 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SidebarDemo/SidebarDemo-Prefix.pch";
 				INFOPLIST_FILE = "SidebarDemo/SidebarDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "98285c2c-7461-4122-82ef-12a1af08a7ea";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -32,6 +32,10 @@
 
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    NSLog(@"view did load");
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

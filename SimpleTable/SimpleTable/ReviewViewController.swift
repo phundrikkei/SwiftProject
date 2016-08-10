@@ -51,6 +51,6 @@ class ReviewViewController: UIViewController {
         case 300: rating = "great"
         default: break
         }
-        performSegueWithIdentifier("unwindToDetailView", sender: sender)
+        self.performSegueWithIdentifier("unwindToDetailView", sender: sender)
     }
 }
