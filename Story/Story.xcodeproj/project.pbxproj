@@ -12,6 +12,7 @@
 		09120D691D34A39F001688F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09120D671D34A39F001688F8 /* Main.storyboard */; };
 		09120D6E1D34A39F001688F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09120D6D1D34A39F001688F8 /* Assets.xcassets */; };
 		09120D711D34A39F001688F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09120D6F1D34A39F001688F8 /* LaunchScreen.storyboard */; };
+		098CA24D1D3F69F8008BC80F /* ViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098CA24C1D3F69F7008BC80F /* ViewDetailController.swift */; };
 		09CF57301D34E8BC0051AC71 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF572F1D34E8BC0051AC71 /* StoryCell.swift */; };
 		09F22CDF1D34D5A6003C7BFA /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F22CDE1D34D5A6003C7BFA /* Define.swift */; };
 		09F22CE31D34DE0B003C7BFA /* Story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09F22CE11D34DE0B003C7BFA /* Story.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 		09120D6D1D34A39F001688F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09120D701D34A39F001688F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09120D721D34A39F001688F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Aplication/Info.plist; sourceTree = "<group>"; };
+		098CA24C1D3F69F7008BC80F /* ViewDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDetailController.swift; sourceTree = "<group>"; };
 		09CF572F1D34E8BC0051AC71 /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		09F22CDE1D34D5A6003C7BFA /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		09F22CE21D34DE0B003C7BFA /* Story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Story.xcdatamodel; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				09120D651D34A39F001688F8 /* ViewController.swift */,
+				098CA24C1D3F69F7008BC80F /* ViewDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				09120D641D34A39F001688F8 /* AppDelegate.swift in Sources */,
 				09F22CDF1D34D5A6003C7BFA /* Define.swift in Sources */,
 				09F22CE31D34DE0B003C7BFA /* Story.xcdatamodeld in Sources */,
+				098CA24D1D3F69F8008BC80F /* ViewDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

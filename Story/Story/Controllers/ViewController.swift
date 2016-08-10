@@ -33,6 +33,17 @@ extension ViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! StoryCell
         cell.accessoryType = .DisclosureIndicator
+        let checklistName = "abc 123"
+        var checklistText = NSMutableAttributedString()
+        checklistText = NSMutableAttributedString(string: "\(cell.storyName.text!),\(checklistName)")
+        checklistText.addAttribute(NSFontAttributeName,
+                                   value: UIFont(
+                                    name: "Helvetica",
+                                    size: 11.0)!,
+                                   range: NSRange(location: cell.storyName.text!.characters.count, length: checklistName.characters.count))
+        checklistText.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location: cell.storyName.text!.characters.count, length: checklistName.characters.count+1))
+        cell.storyName.attributedText = checklistText
+        
         return cell
     }
 }
